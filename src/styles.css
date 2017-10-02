@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.gdiv{
+    background-image: url(./assets/ChrisRachelWeddingInvitation2.jpg);
+    background-size: cover;
+
+}

@@ -1,47 +1,44 @@
-
+.generaltext{
+    text-align: center;
+}
 
 .texth{
     font-family: "Destain";
+    
 }
 
-.text2{
-    line-height: 1em;
+.texts{
+    font-family: "KGChelseaMarketScript";
+    display: inline;
 }
 
-.text3{
+.addresstext{
     font-family: "TerryScript";
+    
+    text-align: left;
     position: relative;
-    left: -8.0%;
-    display:inline;
-
+    left: 34%;
 }
 
-.text4{
+.addresstext2{
     font-family: "TerryScript";
+    text-align: left;
     position: relative;
-    left: 9.25%;
-    display:inline;
+    left: 37%;
 }
 
-.text5{
+.addresstext3{
     font-family: "TerryScript";
+    text-align: left;
     position: relative;
-    left: 9.25%;
-    display:inline;
+    left: 32%;
 }
 
-.chrisrachel{
-    white-space: nowrap;
-}
-
-.crplus{
-    font-family:"KGChelseaMarketScript";
-    white-space: nowrap;
-    display:inline;
-    vertical-align: 20%;
-    text-align: left; 
+.addresstext4{
+    font-family: "TerryScript";
+    text-align: left;
     position: relative;
-    left: 1%
+    left: 15%;
 }
 
 @font-face {
