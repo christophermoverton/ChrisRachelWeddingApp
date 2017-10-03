@@ -1,0 +1,9 @@
+<div class="generaltext">
+        <div class="texth" style.font-size="{{rtitleWeight}}px">Guestbook</div>
+        <br><br>
+        <guest-form></guest-form>
+        <br><br>
+    <div *ngFor="let g of guests">
+        <br> {{g.id}} <br> {{ g.name }} 
+    </div>
+</div>

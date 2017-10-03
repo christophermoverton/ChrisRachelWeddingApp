@@ -1,0 +1,66 @@
+.generaltext{
+    text-align: center;
+}
+
+.texth{
+    font-family: "Destain";
+    
+}
+
+.textt{
+    font-family: "TerryScript";
+    top: 10%;
+    position:relative;
+}
+
+.n1{
+    top: 10px;
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.form-control {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "TerryScript", Times, serif;
+    color: rgba(0,142,198,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252,252,252,0);
+    -webkit-box-shadow: 3px 3px 4px 0 rgba(0,0,0,0.4) , 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 3px 3px 4px 0 rgba(0,0,0,0.4) , 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+.form1{
+    text-align: center;
+    width: 50%;
+    height: 30%;
+    
+}
+
+@font-face {
+    font-family: "TerryScript";
+    src: url('../assets/ter1.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Destain";
+    src: url('../assets/destain.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "KGChelseaMarketScript";
+    src: url('../assets/KGChelseaMarketScript.ttf') format("truetype");
+}

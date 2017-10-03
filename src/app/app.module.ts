@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { Ceremony } from './ceremony.component';
 import { Celebration} from './celebration.component';
 import { routerTransition } from './router.animations';
+import { GuestFormComponent} from './guest-form.component';
+import { Guestbook } from './guestbook.component';
 import {
   
     Input,
@@ -72,7 +74,7 @@ ngOnChanges() {
     BrowserModule, AppRouting, FormsModule
   ],
   declarations: [
-    App, AppComponent, Ceremony, Celebration
+    App, AppComponent, Ceremony, Celebration, GuestFormComponent, Guestbook
   ],
  
   providers: [],

@@ -1,0 +1,23 @@
+.generaltext{
+    text-align: center;
+}
+
+.texth{
+    font-family: "Destain";
+    
+}
+
+@font-face {
+    font-family: "TerryScript";
+    src: url('../assets/ter1.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Destain";
+    src: url('../assets/destain.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "KGChelseaMarketScript";
+    src: url('../assets/KGChelseaMarketScript.ttf') format("truetype");
+}

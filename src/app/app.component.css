@@ -2,25 +2,62 @@
 
 .texth{
     font-family: "Destain";
+    position: absolute;
+    top: 17%;
+    left: 22%;
+}
+
+.m1{
+    text-align: left; 
+    position: relative;
+    left: -5.0%; 
+    top: 5%; 
+    
+    vertical-align: bottom;
+}
+
+.m2{
+    text-align: left; 
+    position: relative;
+    left: 45%; 
+    top: 5%;
+    vertical-align: top;
 }
 
 .text2{
     line-height: 1em;
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
+}
+
+.text2:hover{
+    line-height: 1em;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 10px 20px 50px #DBDBDB, 0 0 5px #8A8A8A;
 }
 
 .text3{
     font-family: "TerryScript";
     position: relative;
-    left: -8.0%;
+    left: -12.5%;
+    top: 5%;
     display:inline;
-
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
+    animation-delay: 1.0s;
 }
 
 .text4{
     font-family: "TerryScript";
     position: relative;
-    left: 9.25%;
+    left: 36.5%;
+    top: 5%;
     display:inline;
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
+    animation-delay: 2.0s;
 }
 
 .text5{
@@ -28,12 +65,40 @@
     position: relative;
     left: 9.25%;
     display:inline;
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
+    animation-delay: 0.5s;
+}
+
+.text6{
+    position: relative;
+    top: 85%;
+    left: 15%;
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
+    animation-delay: 3.0s;
 }
 
 .chrisrachel{
-    white-space: nowrap;
+    white-space: nowrap;   
+    position: relative;
+    top: 50%
+    
 }
 
+.chrisrachel:hover{
+    white-space: nowrap;   
+    position: relative;
+    top: 50%;
+    animation-name: example2;
+    animation-duration: 0.5s;
+    animation-iteration-count:infinite;
+
+}
+
+/*--transform: rotate(180deg);*/
 .crplus{
     font-family:"KGChelseaMarketScript";
     white-space: nowrap;
@@ -41,7 +106,8 @@
     vertical-align: 20%;
     text-align: left; 
     position: relative;
-    left: 1%
+    top: 5%;
+    left: 13%;
 }
 
 @font-face {
@@ -57,4 +123,20 @@
 @font-face {
     font-family: "KGChelseaMarketScript";
     src: url('../assets/KGChelseaMarketScript.ttf') format("truetype");
+}
+
+@keyframes example2 {
+    0%   {transform:rotate(0deg);}
+    25%  {transform:rotate(6deg);}
+    50%  {transform:rotate(12deg);}
+    75%  {transform:rotate(6deg);}
+    100% {transform:rotate(0deg);}
+}
+
+@keyframes example3 {
+    0%   {text-shadow: 1px 1px 2px rgba(255, 255, 255, 0), 5px 20px 50px rgba(219, 219, 219, 0), 0 0 5px rgba(100,100,100,0);}
+    25%  {text-shadow: 5px 5px 5spx rgba(255, 255, 255, .5), 5px 20px 50px rgba(219, 219, 219, .5), 0 0 5px rgba(100,100,100,.5);}
+    50%  {text-shadow: 5px 5px 5px rgba(255, 255, 255, 1.0), 5px 20px 50px rgba(219, 219, 219, 1.0), 0 0 5px rgba(100,100,100,1.0);}
+    75%  {text-shadow: 5px 5px 5px rgba(255, 255, 255, .5), 5px 20px 50px rgba(219, 219, 219, .5), 0 0 5px rgba(100,100,100,.5);}
+    100% {text-shadow: 5px 5px 5px rgba(255, 255, 255, 0), 5px 20px 50px rgba(219, 219, 219, 0), 0 0 5px rgba(100,100,100,0);}
 }
