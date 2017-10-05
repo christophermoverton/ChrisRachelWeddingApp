@@ -1,10 +1,20 @@
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+
 .generaltext{
     text-align: center;
 }
 
 .texth{
     font-family: "Destain";
-    
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
 }
 
 .textt{
@@ -18,6 +28,42 @@
     padding-top: 20px;
     text-align: center;
     position: relative;
+}
+
+.button1{
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    float: none;
+    z-index: auto;
+    width: auto;
+    height: auto;
+    position: static;
+    cursor: pointer;
+    opacity: 1;
+    margin: 0;
+    padding: 10px 20px;
+    overflow: visible;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "Times New Roman", Times, serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #3af290;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
 }
 
 .form-control {
@@ -63,4 +109,12 @@
 @font-face {
     font-family: "KGChelseaMarketScript";
     src: url('../assets/KGChelseaMarketScript.ttf') format("truetype");
+}
+
+@keyframes example3 {
+    0%   {text-shadow: 1px 1px 2px rgba(255, 255, 255, 0), 5px 20px 50px rgba(219, 219, 219, 0), 0 0 5px rgba(100,100,100,0);}
+    25%  {text-shadow: 5px 5px 5spx rgba(255, 255, 255, .5), 5px 20px 50px rgba(219, 219, 219, .5), 0 0 5px rgba(100,100,100,.5);}
+    50%  {text-shadow: 5px 5px 5px rgba(255, 255, 255, 1.0), 5px 20px 50px rgba(219, 219, 219, 1.0), 0 0 5px rgba(100,100,100,1.0);}
+    75%  {text-shadow: 5px 5px 5px rgba(255, 255, 255, .5), 5px 20px 50px rgba(219, 219, 219, .5), 0 0 5px rgba(100,100,100,.5);}
+    100% {text-shadow: 5px 5px 5px rgba(255, 255, 255, 0), 5px 20px 50px rgba(219, 219, 219, 0), 0 0 5px rgba(100,100,100,0);}
 }

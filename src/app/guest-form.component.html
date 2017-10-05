@@ -1,26 +1,52 @@
+
 <div class="textt">
 <div class="container">
+    <div [hidden]="submitted">
         <h1 style.font-size="{{rtitleWeight}}px">Guest Form</h1>
-        <form >
+        <form (ngSubmit)="onSubmit()" #guestForm="ngForm">
+         
           <div class="n1">
             <label style.font-size="{{rlabelWeight}}px" class="label1" for="name">Name</label>
-            <input type="text" class="form-control" id="name" required>
+            <input type="text" class="form-control" id="name" required
+            [(ngModel)]="model.name" name="name" #name="ngModel">
+            <div [hidden]="name.valid || name.pristine"
+            class="alert alert-danger">Name is required</div> 
+            <br>TODO: remove this: {{model.name}}
           </div>
      
           <div class="n1">
             <label style.font-size="{{rlabelWeight}}px" for="email">Email</label>
-            <input  type="text" class="form-control" id="email">
+            <input  type="text" class="form-control"  [(ngModel)]="model.email" id="email" name="email">
           </div>
 
           <div class="n1">
                 <label style="vertical-align: top" style.font-size="{{rlabelWeight}}px" for="message">Message</label>
                 
-                <textarea style="height: 200px; width: 500px" class="form-control" id="message"> </textarea>
+                <textarea style="height: 200px; width: 500px" class="form-control" [(ngModel)]="model.message" id="message" name="message"> </textarea>
             </div>
               
-     
-          <button style="position: relative; top: 10px" style.font-size="{{rlabelWeight}}px" type="submit" class="btn btn-success"><div class="textt">Submit</div></button>
+          <button class="button1" style="position: relative; top: 10px" style.font-size="{{rlabelWeight}}px" type="submit"  [disabled]="!guestForm.form.valid"><div class="textt">Submit</div></button>
+          <button class="button1" style="position: relative; top: 10px" style.font-size="{{rlabelWeight}}px" type="button" (click)="newGuest(); guestForm.reset()" ><div class="textt">New Guest</div></button>
      
         </form>
+        </div>
+        <div [hidden]="!submitted" >
+                <h2>You submitted the following:</h2>
+                <div class="row">
+                  <div class="col-xs-3">Name</div>
+                  <div class="col-xs-9  pull-left">{{ model.name }}</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3">Email</div>
+                  <div class="col-xs-9 pull-left">{{ model.email }}</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3">Message</div>
+                  <div class="col-xs-9 pull-left">{{ model.message }}</div>
+                </div>
+                <br>
+                <button class="button1" (click)="submitted=false">Edit</button>
+                <button class="button1" (click)="postData()">Post</button>
+        </div>
     </div>
-    </div>
+</div>

@@ -1,10 +1,14 @@
 .generaltext{
     text-align: center;
+    left: 10%;
+    position: absolute;
 }
 
 .texth{
     font-family: "Destain";
-    
+    animation-name: example3;
+    animation-duration: 4.0s;
+    animation-iteration-count:infinite;
 }
 
 .texts{
@@ -58,4 +62,12 @@ img{
 @font-face {
     font-family: "KGChelseaMarketScript";
     src: url('../assets/KGChelseaMarketScript.ttf') format("truetype");
+}
+
+@keyframes example3 {
+    0%   {text-shadow: 1px 1px 2px rgba(255, 255, 255, 0), 5px 20px 50px rgba(219, 219, 219, 0), 0 0 5px rgba(100,100,100,0);}
+    25%  {text-shadow: 5px 5px 5spx rgba(255, 255, 255, .5), 5px 20px 50px rgba(219, 219, 219, .5), 0 0 5px rgba(100,100,100,.5);}
+    50%  {text-shadow: 5px 5px 5px rgba(255, 255, 255, 1.0), 5px 20px 50px rgba(219, 219, 219, 1.0), 0 0 5px rgba(100,100,100,1.0);}
+    75%  {text-shadow: 5px 5px 5px rgba(255, 255, 255, .5), 5px 20px 50px rgba(219, 219, 219, .5), 0 0 5px rgba(100,100,100,.5);}
+    100% {text-shadow: 5px 5px 5px rgba(255, 255, 255, 0), 5px 20px 50px rgba(219, 219, 219, 0), 0 0 5px rgba(100,100,100,0);}
 }

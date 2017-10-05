@@ -1,7 +1,9 @@
 .navset{
-    position: sticky;
+    position: fixed;
     left: 5%;
     top: 3%;
+    width:10%;
+    height:10%;
     padding-bottom: 2%;
     z-index: 9999999;
 }

@@ -7,6 +7,8 @@ import { Celebration} from './celebration.component';
 import { routerTransition } from './router.animations';
 import { GuestFormComponent} from './guest-form.component';
 import { Guestbook } from './guestbook.component';
+import { HttpModule } from '@angular/http';
+import { SearchService} from './SearchService';
 import {
   
     Input,
@@ -38,6 +40,10 @@ import {
 export class App implements OnChanges{
   public edited = true;
   public visibility = 'hidden';
+  width: number;
+  height: number;
+  rwidth: number;
+  rheight: number;
   @Input() isVisible: boolean = false;
 scan() {
     this.edited = true;
@@ -71,13 +77,13 @@ ngOnChanges() {
 
 @NgModule({
   imports: [
-    BrowserModule, AppRouting, FormsModule
+    BrowserModule, AppRouting, FormsModule, HttpModule
   ],
   declarations: [
     App, AppComponent, Ceremony, Celebration, GuestFormComponent, Guestbook
   ],
  
-  providers: [],
+  providers: [ SearchService ],
   bootstrap: [App]
 })
 
