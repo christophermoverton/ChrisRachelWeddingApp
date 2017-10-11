@@ -107,7 +107,7 @@ export class SearchService {
           .toPromise()
           .then(
               res => { // Success
-                
+                console.log(res);
                 var json=JSON.stringify(res);
                 var jobj = JSON.parse(json);
                 var jobj2 = jobj["_body"];
@@ -115,6 +115,7 @@ export class SearchService {
                 console.log(jobj2);
                 var parseobj = new ParseObject(jobj2);
                 this.results = parseobj.parseString();
+                this.results.reverse();
                 console.log(this.results);
                 
                 /*

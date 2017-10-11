@@ -30,9 +30,10 @@ host: {'[@routerTransition]': ''}*/
     //posts: Object = [];
     //p: any;
     framer: frameResizer;
+    posted: boolean[] = [false];
     constructor(public posts: SearchService){
         this.framer = new frameResizer(1.0,1.0);
-        this.rtitleWeight = this.framer.getTextResize(this.titleWeight);
+        this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight);
         this.raddressWeight = this.rtitleWeight*0.45;
         this.rmapImageSize = this.mapImageSize*this.framer.getScale();
        
@@ -46,13 +47,14 @@ host: {'[@routerTransition]': ''}*/
       this.screenwidth = window.innerWidth-50;
       this.rmaxframeWidth = window.innerWidth-50;
       this.framer = new frameResizer(1.0,1.0);
-      this.rtitleWeight = this.framer.getTextResize(this.titleWeight);
+      this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight);
       this.raddressWeight = this.rtitleWeight*0.45;
       this.rmapImageSize = this.mapImageSize*this.framer.getScale();
 
     }
     getGuestEntries(){
         this.posts.search();
+        this.posted[0] = false;
         //this.http.get("http://chrisandrachelwedding.atwebpages.com/getrecords.php").map((res: Response) => {var json=JSON.stringify(res); console.log(JSON.parse(json)); return JSON.parse(json);}).subscribe(arg => this.posts = arg);
     }
    }

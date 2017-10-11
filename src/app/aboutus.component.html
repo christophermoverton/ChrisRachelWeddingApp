@@ -1,0 +1,98 @@
+{{checkWindowSize()}}
+{{windowSmall}}
+<div *ngIf="!windowSmall;else other_content" >
+    <div *ngIf="!windowSmallHeight; else other_content2">
+            <div class="generaltext"  (window:resize)="onResize()">
+                    <div class="texth" style.font-size="{{rtitleWeight}}px">About Us</div>
+                    <br><br>
+                    
+            </div>
+            <div class="pcn"> 
+                    <div class="row">
+                            <div *ngFor="let photoname of photonames; let i = index">
+                                
+                                        <div class="column">
+                                          <div (click)="onSelect(i)">  
+                                          <img src="./assets/{{photoname}}"  class="hover-shadow" style.object-position="0% {{typosition[i]}}%" style.height="{{rrowHeight}}px">
+                                          </div>
+                                        </div>    
+                            </div> 
+                        </div>
+            </div>
+            
+            <div class="bigcontainer">
+             
+                    
+                    
+                    <div class="bigimage">
+                    <img src="./assets/{{selectedphoto}}"  [ngClass]="fadeIn? 'pic1tr' : 'pic2tr'" style.object-position="0% {{typosition2[selectedindexoffset]}}%">
+                    </div>
+                    <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
+                    <div class="next round" (click)="onSelectRight()">&#8250;</div>
+            </div>
+</div>
+
+<ng-template #other_content2>
+        <div class="generaltext"  (window:resize)="onResize()">
+                <div class="texth" style.font-size="{{rtitleWeight}}px">About Us</div>
+                <br><br>
+                
+        </div>
+        <div class="pcn3"> 
+        <div class="row">
+            <div *ngFor="let photoname of photonames; let i = index">
+                
+                        <div class="column">
+                          <div (click)="onSelect(i)">  
+                          <img src="./assets/{{photoname}}"  class="hover-shadow" style.object-position="0% {{typosition[i]}}%" style.height="{{rrowHeight}}px">
+                          </div>
+                        </div>    
+            </div> 
+        </div>
+        </div>
+        
+        <div class="bigcontainer" style="top: 100%; height:110%; margin-left: 25%">
+         
+                
+                
+                <div class="bigimage">
+                <img src="./assets/{{selectedphoto}}"   [ngClass]="fadeIn? 'pic1tr' : 'pic2tr'">
+                </div>
+                <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
+                <div class="next round" (click)="onSelectRight()">&#8250;</div>
+        </div>
+     
+</ng-template>
+</div>
+<ng-template #other_content>
+        <div class="generaltext"  (window:resize)="onResize()" style.left="50%">
+                <div class="texth" style.font-size="{{rtitleWeight}}px">About Us</div>
+                <br><br>
+                
+        </div>
+        <div class="pcn2"> 
+        <div class="row">
+            <div *ngFor="let photoname of photonames; let i = index">
+                
+                        <div class="column">
+                          <div (click)="onSelect(i)">  
+                          <img src="./assets/{{photoname}}"  class="hover-shadow" style.object-position="0% {{typosition[i]}}%" style.height="{{rrowHeight}}px">
+                          </div>
+                        </div>    
+            </div> 
+        </div>
+        </div>
+        {{checkWindowSize()}}
+        {{windowSmall}}
+        <div class="bigcontainer" style="margin-left: 30%; left: 0%; width: 160%">
+         
+                
+                        {{typosition2[selectedindexoffset]}}
+                <div class="bigimage">
+        
+                <img src="./assets/{{selectedphoto}}"   [ngClass]="fadeIn? ['pic1tr'] : ['pic2tr']" style.object-position="0% {{typosition2[selectedindexoffset]}}%">
+                </div>
+                <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
+                <div class="next round" (click)="onSelectRight()">&#8250;</div>
+        </div>
+</ng-template>

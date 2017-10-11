@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
 import {PVector} from './lineData';
 import {frameResizer} from './frameResizer';
 import { Guest }    from './guest';
@@ -26,12 +26,14 @@ export class GuestFormComponent {
     //private http: Http;
     framer: frameResizer;
     test: number;
+    @Input('posted') posted:boolean[] = [false]; 
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
 
   model = new Guest(18, 'Dr IQ', this.powers[0], 'Hello hello my name is Jim Bobby.\n Been an old friend of shorty there!\n Gratz!');
 
   submitted = false;
+  
   constructor(private http: Http){
     //this.http = http;
     this.framer = new frameResizer(1.0,1.0);
@@ -53,7 +55,8 @@ export class GuestFormComponent {
     console.log(JSON.stringify({name:this.model.name, email: this.model.email, message:this.model.message}));
     //console.log(this.http.get("http://chrisandrachelwedding.atwebpages.com/").toPromise().then(response => response.json().data));
     this.http.post("http://chrisandrachelwedding.atwebpages.com/insert.php",JSON.stringify({name:this.model.name, email: this.model.email, message:this.model.message}), {headers:headers}).subscribe(res => console.log(res.text()));
-
+    this.submitted = false;
+    this.posted[0] = true;
     }
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only

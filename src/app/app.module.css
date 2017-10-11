@@ -10,6 +10,7 @@
 
 .set{
     opacity: 1.0;
+    backdrop-filter: blur(20px);
     /*background-image: url(../assets/ceremonyicon.png);
     width: 50px;
     height: 50px;
@@ -24,7 +25,12 @@ li{
 .set2{
     width:80px;
     height:40px;
-    background-color: rgba(240, 240, 240, 0.21);
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9aea7+0,efb8b1+49,f4bcb5+51,efa69e+71,e59b95+99&1+0,0.23+100 */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(249,174,167,1) 0%, rgba(239,184,177,0.62) 49%, rgba(244,188,181,0.6) 51%, rgba(239,166,158,0.45) 71%, rgba(229,155,149,0.24) 99%, rgba(229,155,149,0.23) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(249,174,167,1) 0%,rgba(239,184,177,0.62) 49%,rgba(244,188,181,0.6) 51%,rgba(239,166,158,0.45) 71%,rgba(229,155,149,0.24) 99%,rgba(229,155,149,0.23) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(249,174,167,1) 0%,rgba(239,184,177,0.62) 49%,rgba(244,188,181,0.6) 51%,rgba(239,166,158,0.45) 71%,rgba(229,155,149,0.24) 99%,rgba(229,155,149,0.23) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9aea7', endColorstr='#3be59b95',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     /*border: 1px solid #AC7777;*/
     /*outline: 1px solid black;*/
     border-radius: 3px;

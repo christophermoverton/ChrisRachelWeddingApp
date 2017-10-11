@@ -24,17 +24,17 @@ host: {'[@routerTransition]': ''}*/
     framer: frameResizer;
     constructor(){
         this.framer = new frameResizer(1.0,1.0);
-        this.rtitleWeight = this.framer.getTextResize(this.titleWeight);
+        this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight);
         this.raddressWeight = this.rtitleWeight*0.45;
-        this.rmapImageSize = this.mapImageSize*this.framer.getScale();
+        this.rmapImageSize = this.mapImageSize*Math.pow(this.framer.getScale(),0.8);
     }
     onResize(){
       this.screenwidth = window.innerWidth-50;
       this.rmaxframeWidth = window.innerWidth-50;
       this.framer = new frameResizer(1.0,1.0);
-      this.rtitleWeight = this.framer.getTextResize(this.titleWeight);
+      this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight);
       this.raddressWeight = this.rtitleWeight*0.45;
-      this.rmapImageSize = this.mapImageSize*this.framer.getScale();
+      this.rmapImageSize = this.mapImageSize*Math.pow(this.framer.getScale(),0.8);
 
     }
    }

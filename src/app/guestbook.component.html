@@ -1,9 +1,11 @@
-<div class="generaltext">
+<div class="generaltext"  (window:resize)="onResize()">
         <div class="texth" style.font-size="{{rtitleWeight}}px">Guestbook</div>
         <br><br>
-        <guest-form></guest-form>
+        <guest-form [posted]="posted"></guest-form>
         <br><br>
-    <div *ngFor="let p of posts.results">
-        <br> {{p.name}} <br> {{ p.message }} 
+        
+    <div *ngIf="posted[0]"> Updating... <span>{{getGuestEntries()}}</span></div>
+    <div *ngFor="let p of posts.results" class="posts">
+        <br><div class="text1"> {{p.name}} </div><br> {{ p.message }} 
     </div>
 </div>

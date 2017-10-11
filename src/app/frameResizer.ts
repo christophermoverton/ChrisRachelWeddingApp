@@ -38,6 +38,14 @@ export class frameResizer{
         //return snewopos.add(new PVector(this.baseHeight/2.0, this.baseWidth/2.0));
     }
 
+    public getPositionrefactor(top: number, left: number, fallofffactor: number){
+        this.checkScalef();
+        let newopos = new PVector(top,left);
+        let snewopos = newopos.multiply(Math.pow(this.scalef,fallofffactor));
+        console.log(snewopos);
+        return snewopos;    
+    }
+
     public getTextResize(weight: number): number{
         this.checkScalef();
         console.log("Scalef:");

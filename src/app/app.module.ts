@@ -9,6 +9,7 @@ import { GuestFormComponent} from './guest-form.component';
 import { Guestbook } from './guestbook.component';
 import { HttpModule } from '@angular/http';
 import { SearchService} from './SearchService';
+import { Aboutus} from './aboutus.component';
 import {
   
     Input,
@@ -80,7 +81,7 @@ ngOnChanges() {
     BrowserModule, AppRouting, FormsModule, HttpModule
   ],
   declarations: [
-    App, AppComponent, Ceremony, Celebration, GuestFormComponent, Guestbook
+   App, AppComponent, Ceremony, Celebration, GuestFormComponent, Guestbook, Aboutus
   ],
  
   providers: [ SearchService ],
