@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import {PVector} from './lineData';
 import {frameResizer} from './frameResizer';
 import { routerTransition } from './router.animations';
@@ -34,9 +34,14 @@ host: {'[@routerTransition]': ''}*/
     selectedindexoffset: number = 0;
     typosition: number[] = [0,0,0,15,0,0,0,25,0,29,15,0,0,0,0,0,0,0,0,0];
     typosition2: number[] = [0,0,0,15,0,0,15,25,0,29,15,0,0,0,0,0,0,0,0,0];
+    typosition3: number[] = [0,5,0,0,0,0,0,0,5,0,0,0,0,0,0,0,15,0,5,0];
     windowSmall: boolean = false;
     windowSmallHeight: boolean = false;
     fadeIn: boolean = true;
+    topPos: number = window.innerHeight*0.05;
+    topPos2: number = window.innerHeight*0.3;
+    rtopPos: number = 0;
+    rtopPos2: number = 0;
     constructor(){
         this.framer = new frameResizer(1.0,1.0);
         this.rtitleWeight = Math.pow(this.framer.getScale(),0.4)*this.titleWeight;
@@ -54,7 +59,14 @@ host: {'[@routerTransition]': ''}*/
       this.rmapImageSize = this.mapImageSize*this.framer.getScale();
       this.rrowHeight = this.rowHeight*Math.pow(this.framer.getScale(),0.3);
       this.checkWindowSize();
+      
     }
+
+    @HostListener('window:scroll') onScroll() {
+        this.rtopPos = this.topPos-window.scrollY; 
+        this.rtopPos2 = this.topPos2 - window.scrollY;
+      }
+
     onSelect(sindex: number): void {
         this.selectedphoto = this.photonames[sindex];
         this.selectedindex = sindex;

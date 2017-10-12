@@ -7,6 +7,15 @@
     height: 200px;
 }
 
+.generaltext2{
+    text-align: center;
+    position: fixed;
+    left: 37%;
+    top: 5%;
+    
+    height: 200px;
+}
+
 
 .texth{
     font-family: "Destain";
@@ -55,7 +64,7 @@
 }
 
 .pcn2{
-    position: absolute;
+    position: fixed;
     left: 35%;
     top: 30%;
     width: 70%;
@@ -86,8 +95,8 @@
     overflow: hidden;    
 }
 
-.previous {
-    background-color: #f1f1f1;
+.prev {
+    background-color: #4CAF50;
     color: black;
 }
 

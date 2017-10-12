@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {PVector} from './lineData';
 import {frameResizer} from './frameResizer';
+import {LightsAnimDirective} from './lightsanim.directive';
 
 @Component({
   selector: 'app-root',

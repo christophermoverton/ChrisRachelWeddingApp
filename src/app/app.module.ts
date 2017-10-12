@@ -10,6 +10,7 @@ import { Guestbook } from './guestbook.component';
 import { HttpModule } from '@angular/http';
 import { SearchService} from './SearchService';
 import { Aboutus} from './aboutus.component';
+import { LightsAnimDirective} from './lightsanim.directive';
 import {
   
     Input,
@@ -81,7 +82,7 @@ ngOnChanges() {
     BrowserModule, AppRouting, FormsModule, HttpModule
   ],
   declarations: [
-   App, AppComponent, Ceremony, Celebration, GuestFormComponent, Guestbook, Aboutus
+   App, AppComponent, Ceremony, Celebration, GuestFormComponent, Guestbook, Aboutus, LightsAnimDirective
   ],
  
   providers: [ SearchService ],

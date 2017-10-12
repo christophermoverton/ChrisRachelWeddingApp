@@ -1,5 +1,5 @@
 {{checkWindowSize()}}
-{{windowSmall}}
+
 <div *ngIf="!windowSmall;else other_content" >
     <div *ngIf="!windowSmallHeight; else other_content2">
             <div class="generaltext"  (window:resize)="onResize()">
@@ -65,12 +65,12 @@
 </ng-template>
 </div>
 <ng-template #other_content>
-        <div class="generaltext"  (window:resize)="onResize()" style.left="50%">
-                <div class="texth" style.font-size="{{rtitleWeight}}px">About Us</div>
+        <div class="generaltext2"  (window:resize)="onResize()" (window:scroll)="onScroll()" style.left="50%" style.top="{{rtopPos}}px">
+                <div class="texth" style.font-size="{{rtitleWeight}}px" >About Us</div>
                 <br><br>
                 
         </div>
-        <div class="pcn2"> 
+        <div class="pcn2" (window:scroll)="onScroll()" style.top="{{rtopPos2}}px"> 
         <div class="row">
             <div *ngFor="let photoname of photonames; let i = index">
                 
@@ -83,14 +83,14 @@
         </div>
         </div>
         {{checkWindowSize()}}
-        {{windowSmall}}
-        <div class="bigcontainer" style="margin-left: 30%; left: 0%; width: 160%">
+      
+        <div class="bigcontainer" style="margin-left: 30%; left: 0%; width: 200%">
          
                 
-                        {{typosition2[selectedindexoffset]}}
+                        
                 <div class="bigimage">
         
-                <img src="./assets/{{selectedphoto}}"   [ngClass]="fadeIn? ['pic1tr'] : ['pic2tr']" style.object-position="0% {{typosition2[selectedindexoffset]}}%">
+                <img src="./assets/{{selectedphoto}}"   [ngClass]="fadeIn? ['pic1tr'] : ['pic2tr']" style.object-position="{{typosition3[selectedindexoffset]}}% {{typosition2[selectedindexoffset]}}%">
                 </div>
                 <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
                 <div class="next round" (click)="onSelectRight()">&#8250;</div>
