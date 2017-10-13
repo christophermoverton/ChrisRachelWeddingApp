@@ -3,6 +3,7 @@ import {PVector} from './lineData';
 import {frameResizer} from './frameResizer';
 import { routerTransition } from './router.animations';
 import { NgClass, NgStyle } from '@angular/common';
+import {LightsAnimDirective} from './lightsanim.directive'
 
 @Component({
     moduleId: module.id,
@@ -35,6 +36,7 @@ host: {'[@routerTransition]': ''}*/
     typosition: number[] = [0,0,0,15,0,0,0,25,0,29,15,0,0,0,0,0,0,0,0,0];
     typosition2: number[] = [0,0,0,15,0,0,15,25,0,29,15,0,0,0,0,0,0,0,0,0];
     typosition3: number[] = [0,5,0,0,0,0,0,0,5,0,0,0,0,0,0,0,15,0,5,0];
+    typosition4: number[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0];
     windowSmall: boolean = false;
     windowSmallHeight: boolean = false;
     fadeIn: boolean = true;
