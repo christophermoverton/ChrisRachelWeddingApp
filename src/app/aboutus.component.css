@@ -65,7 +65,7 @@
 
 .pcn2{
     position: fixed;
-    left: 30%;
+    left: 28%;
     top: 30%;
     width: 70%;
     color: red;
@@ -138,7 +138,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61f5f6f6', e
     margin-top: 8%;
     margin-left: 6%;
     margin-bottom: 2%;
-    width: 80%;
+    width: 50%;
     height: 70%;
     border-radius: 8px; 
 

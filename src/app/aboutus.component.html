@@ -2,7 +2,6 @@
 
 <div *ngIf="!windowSmall;else other_content" >
     <div *ngIf="!windowSmallHeight; else other_content2">
-           
             <div class="generaltext"  (window:resize)="onResize()">
                     <div class="texth" style.font-size="{{rtitleWeight}}px">About Us</div>
                     <br><br>
@@ -21,17 +20,18 @@
                         </div>
             </div>
             
-            <div class="bigcontainer" (click)="onSelectRight()">
+            <div class="bigcontainer">
              
                     
                     
-                    <div class="bigimage">
+                    <div class="bigimage" (click)="onSelectRight()">
                     <img src="./assets/{{selectedphoto}}"  [ngClass]="fadeIn? 'pic1tr' : 'pic2tr'" style.object-position="0% {{typosition2[selectedindexoffset]}}%">
                     </div>
                     <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
                     <div class="next round" (click)="onSelectRight()">&#8250;</div>
             </div>
-            <canvas anim-directive style.display="inline" style.top="0%" style.overflow="hidden" style.position="fixed" style.z-order="9999999"></canvas>
+            <canvas anim-directive style.display="inline" style.top="0%" style.overflow="hidden" style.position="fixed" style.z-order="9999999" [heightmult]=".75"></canvas>
+            
 </div>
 
 <ng-template #other_content2>

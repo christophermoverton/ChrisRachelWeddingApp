@@ -1,4 +1,4 @@
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener, OnInit} from '@angular/core';
 import {PVector} from './lineData';
 import {frameResizer} from './frameResizer';
 import { routerTransition } from './router.animations';
@@ -50,7 +50,14 @@ host: {'[@routerTransition]': ''}*/
         this.raddressWeight = this.rtitleWeight*0.45;
         this.rmapImageSize = this.mapImageSize*this.framer.getScale();
         this.rrowHeight = this.rowHeight*Math.pow(this.framer.getScale(),0.3);
+        
+    }
+
+    ngOnInit(){
         this.checkWindowSize();
+        console.log("hitting aboutusinit!");
+        console.log(this.windowSmall);
+        console.log(this.windowSmallHeight);
     }
     onResize(){
       this.screenwidth = window.innerWidth-50;
@@ -111,7 +118,7 @@ host: {'[@routerTransition]': ''}*/
         1000);
     }
     checkWindowSize(): void{
-        if (window.innerWidth < 600.0){
+        if (window.innerWidth < 500.0){
             this.windowSmall = true;
         }
         else{
