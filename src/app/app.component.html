@@ -1,17 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<canvas anim-directive style.display="fixed" style.top="0%" style.overflow="hidden"></canvas>
-<div class="texth" style="text-align:center" (window:resize)="onResize()">
-  <div class="text2"style.font-size="{{rtitleWeight}}px">
-   <div class="m1"> We're getting</div></div>
-  <div class="text2" style.font-size="{{rtitleWeight2}}px"><div class="m2">married!</div></div>
-  <img  class="chrisrachel" src="./assets/Chris.png" style.height="{{rchrisImageSize}}px" style="left:8.0%">
-  <div class="crplus"style.font-size="{{rtitleWeight}}px" style.height="{{rchrisImageSize}}px">   + </div>
-  <img  class="chrisrachel" src="./assets/RachelImage.png" style.height="{{rrachelImageSize}}px" style="left:15.5%">
-  <br>
-  <div class="text3" style.font-size="{{rcrtitleWeight}}px">Chris</div>
-  <div class="text4" style.font-size="{{rcrtitleWeight}}px">Rachel</div>
-  <div class="text6" style.font-size="{{rdatetitleWeight}}px">Saturday October 28th at Noon</div>
+<div *ngIf="!windowSmall;else other_content" >
+  
+  <canvas anim-directive style.display="fixed" style.top="0%" style.overflow="hidden"></canvas>
+  <div class="texth" style="text-align:center" (window:resize)="onResize()">
+    <div class="text2" style.font-size="{{rtitleWeight}}px">
+      <div class="m1"> We're getting</div></div>
+     <div class="text2" style.font-size="{{rtitleWeight}}px"><div class="m2">married!</div></div>
+     <img  class="chrisrachel" src="./assets/Chris.png" style.height="{{rchrisImageSize}}px" style="left:8.0%">
+     <div class="crplus"style.font-size="{{rtitleWeight}}px" style.height="{{rchrisImageSize}}px">   + </div>
+     <img  class="chrisrachel" src="./assets/RachelImage.png" style.height="{{rrachelImageSize}}px" style="left:15.5%">
+     <br>
+     <div class="text3" style.font-size="{{rcrtitleWeight}}px">Chris</div>
+     <div class="text4" style.font-size="{{rcrtitleWeight}}px">Rachel</div>
+     <div class="text6" style.font-size="{{rdatetitleWeight}}px">Saturday October 28th at Noon</div>
+  </div>
 </div>
+<ng-template #other_content>
+  <canvas anim-directive style.display="fixed" style.top="0%" style.overflow="hidden" [heightmult]="0.75"></canvas>
+  <div class="texth" style="text-align:center" (window:resize)="onResize()">
+    <div class="text2"style="font-size:300%"><div class="m1"> We're getting</div></div>
+    <div class="text2" style="font-size:300%"><div class="m2">married!</div></div>
+    <img  class="chrisrachel" src="./assets/Chris.png" style.height="{{rchrisImageSize}}px" style="left:8.0%">
+    <div class="crplus"style.font-size="{{rtitleWeight}}px" style.height="{{rchrisImageSize}}px">   + </div>
+    <img  class="chrisrachel" src="./assets/RachelImage.png" style.height="{{rrachelImageSize}}px" style="left:15.5%">
+    <br>
+    <div class="text3" style.font-size="{{rcrtitleWeight}}px">Chris</div>
+    <div class="text4" style.font-size="{{rcrtitleWeight}}px">Rachel</div>
+    <div class="text6" style.font-size="{{rdatetitleWeight}}px">Saturday October 28th at Noon</div>
+  </div>
+</ng-template>
+
 
 <!--
 <h2>Here are some links to help you start: </h2>

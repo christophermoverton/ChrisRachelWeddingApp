@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {PVector} from './lineData';
 import {frameResizer} from './frameResizer';
 import {LightsAnimDirective} from './lightsanim.directive';
@@ -44,8 +44,15 @@ export class AppComponent {
   rmaxframeWidth: number;
   scrollpos: number = 0.0;
   framer: frameResizer;
+  windowSmall: boolean = false;
+  windowSmallHeight: boolean = false;
   constructor(){
-    //called first time before the ngOnInit()
+
+       //console.log("this weight: ")
+       //console.log(this.rtitleWeight);
+       //console.log(this.rttitleLeft)
+   }
+   ngOnInit(){
     this.framer = new frameResizer(this.titleHeight,this.titleWidth);
     this.rtitleHeight = this.titleHeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getHeight();
     this.rtitleWidth = this.titleWidth*Math.pow(this.framer.getScale(),0.8);//this.framer.getWidth();
@@ -55,7 +62,7 @@ export class AppComponent {
     let tpos = this.framer.getPositionrefactor(this.ttitleTop,this.ttitleLeft,0.8);
     this.rttitleTop = tpos.x;
     this.rttitleLeft = tpos.y;
-    this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight);
+    this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.7);//this.framer.getTextResize(this.titleWeight);
     this.rtitleWeight2 = this.titleWeight2*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight2);
     this.rcrtitleWeight = this.rtitleWeight*0.30;
     this.rdatetitleWeight = this.rtitleWeight*0.4;
@@ -65,11 +72,8 @@ export class AppComponent {
     this.rmaxframeWidth = this.framer.getScreenResize(this.maxframeWidth);
     this.rchrisImageSize = this.chrisImageSize*Math.pow(this.framer.getScale(),0.8);
     this.rrachelImageSize = this.rachelImageSize*Math.pow(this.framer.getScale(),0.8);
-       //console.log("this weight: ")
-       //console.log(this.rtitleWeight);
-       //console.log(this.rttitleLeft)
+    this.checkWindowSize();
    }
-
    public onResize(){
     this.framer = new frameResizer(this.titleHeight,this.titleWidth);
     this.rtitleHeight = this.titleHeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getHeight();
@@ -80,7 +84,7 @@ export class AppComponent {
     let tpos = this.framer.getPositionrefactor(this.ttitleTop,this.ttitleLeft,0.8);
     this.rttitleTop = tpos.x;
     this.rttitleLeft = tpos.y;
-    this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight);
+    this.rtitleWeight = this.titleWeight*Math.pow(this.framer.getScale(),0.7);//this.framer.getTextResize(this.titleWeight);
     this.rtitleWeight2 = this.titleWeight2*Math.pow(this.framer.getScale(),0.8);//this.framer.getTextResize(this.titleWeight2);
     this.rcrtitleWeight = this.rtitleWeight*0.30;
     this.rdatetitleWeight = this.rtitleWeight*0.4;
@@ -90,5 +94,20 @@ export class AppComponent {
     this.rmaxframeWidth = this.framer.getScreenResize(this.maxframeWidth);
     this.rchrisImageSize = this.chrisImageSize*Math.pow(this.framer.getScale(),0.8);
     this.rrachelImageSize = this.rachelImageSize*Math.pow(this.framer.getScale(),0.8);
+    this.checkWindowSize();
     }
+    checkWindowSize(): void{
+      if (window.innerWidth < 500.0){
+          this.windowSmall = true;
+      }
+      else{
+          this.windowSmall = false;
+      }
+      if (window.innerHeight < 500.0){
+          this.windowSmallHeight = true;
+      }
+      else{
+          this.windowSmallHeight = false;
+      }
+  }
 }
