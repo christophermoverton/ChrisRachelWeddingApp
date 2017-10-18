@@ -27,6 +27,7 @@
                     <div class="bigimage" (click)="onSelectRight()">
                     <img src="./assets/{{selectedphoto}}"  [ngClass]="fadeIn? 'pic1tr' : 'pic2tr'" style.object-position="0% {{typosition2[selectedindexoffset]}}%">
                     </div>
+                    <div class="bigimagecaption" style.font-size="{{raddressWeight}}px"><div *ngFor="let hero of photocaptions[selectedindex]">{{hero}}<br></div></div>
                     <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
                     <div class="next round" (click)="onSelectRight()">&#8250;</div>
             </div>
@@ -61,6 +62,7 @@
                 <div class="bigimage" (click)="onSelectRight()">
                 <img src="./assets/{{selectedphoto}}"   [ngClass]="fadeIn? 'pic1tr' : 'pic2tr'" style.object-position="{{typosition4[selectedindexoffset]}}% 0%">
                 </div>
+                <div class="bigimagecaption" style.font-size="{{raddressWeight}}px"><div *ngFor="let hero of photocaptions[selectedindex]">{{hero}}<br></div></div>
                 <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
                 <div class="next round" (click)="onSelectRight()">&#8250;</div>
         </div>
@@ -96,7 +98,9 @@
                 <div class="bigimage" (click)="onSelectRight()" style="width:80%">
                 
                 <img src="./assets/{{selectedphoto}}"   [ngClass]="fadeIn? ['pic1tr'] : ['pic2tr']" style.object-position="{{typosition3[selectedindexoffset]}}% {{typosition2[selectedindexoffset]}}%">
+                <div class="bigimagecaption2" style.font-size="20px"><div *ngFor="let hero of photocaptions[selectedindex]">{{hero}}<br></div></div>
                 </div>
+                
                 <div class="prev round" (click)="onSelectLeft()">&#8249;</div>
                 <div class="next round" (click)="onSelectRight()">&#8250;</div>
         </div>

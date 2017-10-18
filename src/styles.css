@@ -2,5 +2,8 @@
 .gdiv{
     background-image: url(./assets/ChrisRachelWeddingInvitation2.jpg);
     background-size: cover;
-
+    
+    overflow: scroll;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }

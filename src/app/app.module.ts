@@ -11,6 +11,7 @@ import { HttpModule } from '@angular/http';
 import { SearchService} from './SearchService';
 import { Aboutus} from './aboutus.component';
 import { LightsAnimDirective} from './lightsanim.directive';
+import { NgClass } from '@angular/common';
 import {
   
     Input,
@@ -46,6 +47,8 @@ export class App implements OnChanges{
   height: number;
   rwidth: number;
   rheight: number;
+  showM: boolean = false;
+  fadeM: boolean = false;
   @Input() isVisible: boolean = false;
 scan() {
     this.edited = true;
@@ -64,6 +67,14 @@ scan() {
 ngOnChanges() {
  this.visibility = this.isVisible ? 'shown' : 'hidden';
 }
+ showMenu(){
+   this.showM = true;
+   setTimeout(() => 
+   {
+    this.showM = false;
+   },
+   7000);
+ }
 }
 
 

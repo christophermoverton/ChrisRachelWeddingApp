@@ -6,11 +6,33 @@
     height:5%;
     padding-bottom: 2%;
     z-index: 9999999;
-    display: inline;
+    
+}
+
+.hidstuff1{
+    visibility: hidden;
+    opacity: 0.0;
+    transition: visibility 0s, opacity 1.5s linear;
+}
+
+.hidstuff2{
+    visibility: visible;
+    opacity: 1.0;
+    transform: translateY(-20%);
+    transition: visibility 0.0s, opacity 3.0s linear;
+    cursor: pointer;
+}
+
+.hidstuff3{
+    visibility: visible;
+    opacity: 1.0;
+    transition: visibility 0s, opacity 3.0s linear;
+    cursor: pointer;
 }
 
 .set{
-    opacity: 1.0;
+    /*
+    opacity: 1.0;*/
     backdrop-filter: blur(20px);
     /*background-image: url(../assets/ceremonyicon.png);
     width: 50px;
@@ -89,4 +111,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9aea7', end
     padding-bottom: 8.5px;
     padding-top: 8.5px;
     object-fit: contain;
+}
+
+.fadeIn{
+    animation-timing-function: ease-in-out;
+    animation-name: picb;
+    animation-duration: 1s;
+    animation-iteration-count:1; 
+}
+
+.fadeOut{
+    animation-timing-function: ease-in-out;
+    animation-name: picc;
+    animation-duration: 1s;
+    animation-iteration-count:1; 
+}
+
+@keyframes picb {
+    0%   {opacity: 0.0;}
+    100%  {opacity: 1.0;}
+
+}
+
+@keyframes picc {
+    0%   {opacity: 1.0;}
+    100%  {opacity: 0.0;}
+
 }

@@ -29,7 +29,28 @@ host: {'[@routerTransition]': ''}*/
     photonames: string[] = ["chrisboytoygun.jpg","chrishike.jpg","rachel4yrsold.jpg","rachel8yearsold.jpg","rachelboat2.jpg",
                             "rachelcarousel2.jpg","rachelcollegephoto2.jpg","chrisnicolestudiokids.jpg","chrisrachel.jpg",
                             "chrisfamily.jpg","chrisstudio.jpg","chrisnicolehighschool.jpg","chrissadie.jpg",
-                            "chrissequoia.jpg","rachelcollegephoto4.jpg","rachelindia.jpg","rachelpose.jpg","chrisboytoygun.jpg", "chrishike.jpg", "rachel4yrsold.jpg"];
+                            "chrissequoia.jpg","rachelcollegephoto4.jpg","rachelindia.jpg","rachelpose.jpg","chrisboytoygun.jpg",
+                            "chrishike.jpg", "rachel4yrsold.jpg"];
+    photocaptions: string[][] = [["","70s roadtrips: 8-tracks and no seatbelts!"," Chris, age 5"],
+                                ["I’m clearly too sexy for the Buffalo River Trail!  Also, I’m very tired.","Chris, age 39"],
+                                ["Want to win those cookies?  Pro tip: have the correct answers embroidered onto your clothing!","Rachel, age 4"],
+                                ["Daring to ask: how puffy can my hair be??","Answer:  Too puffy.","Rachel, age 10"],
+                                ["Rocking water sports at Spiritwood Lake, ND.","Next up: synchronized swimming!", "Rachel, age 14"],
+                                ["","Blondie, ne’er-do-well, and Harley hog.", "Rachel, age 2"],
+                                ["On the mind of all Seattle residents:  whose legs are paler?", "Rachel, age 24"]
+                                ,["An early prototype for Japanese anime classic \"Sailor Moon.\"","Chris, age 5"],
+                                ["","The happy couple at Flagstaff Mountain, CO."],
+                                ["","The fabulous Overtons circa 1982."],
+                                ["Classic 80s school pic:  bowl cut, faux fall background and adorable dimples!","Chris, age 10"],
+                                ["It was the 90s. Our hair was big. And it was beautiful.","Chris, age 17"],
+                                ["","Puppy love!","Chris, age 22"],
+                                ["","Among the giants at Sequoia National Park, CA","Chris, age 18"],
+                                ["We’re going to make it after all!  Master’s in Public Administration, University of Washington","Rachel, age 36"],
+                                ["Water is life.   A community-led total sanitation meeting in Bangladesh.","Rachel, age 29"],
+                                ["","The Princess and the Peonies","Rachel, age 32"],
+                                ["","70s roadtrips: 8-tracks and no seatbelts!"," Chris, age 5"],
+                                ["I’m clearly too sexy for the Buffalo River Trail!  Also, I’m very tired.","Chris, age 39"],
+                                ["Want to win those cookies?  Pro tip: have the correct answers embroidered onto your clothing!","Rachel, age 4"]];
     selectedphoto: string = this.photonames[0];
     selectedindex: number = 0;
     selectedindexoffset: number = 0;
@@ -47,7 +68,7 @@ host: {'[@routerTransition]': ''}*/
     constructor(){
         this.framer = new frameResizer(1.0,1.0);
         this.rtitleWeight = Math.pow(this.framer.getScale(),0.4)*this.titleWeight;
-        this.raddressWeight = this.rtitleWeight*0.45;
+        this.raddressWeight = this.rtitleWeight*0.25;
         this.rmapImageSize = this.mapImageSize*this.framer.getScale();
         this.rrowHeight = this.rowHeight*Math.pow(this.framer.getScale(),0.3);
         

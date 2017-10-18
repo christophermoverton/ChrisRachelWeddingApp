@@ -1,3 +1,6 @@
+{{checkWindowSize()}}
+
+<div *ngIf="!windowSmall;else other_content" >
 <div class="generaltext"  (window:resize)="onResize()">
 <div class="texth" style.font-size="{{rtitleWeight}}px">Ceremony</div>
 <br><br>
@@ -8,22 +11,61 @@
 <img  src="./assets/bitmap.png" style.height="{{rmapImageSize}}px">
 <div class="addresstext4" style.font-size="{{raddressWeight}}px"> From the Arboretum parking lot go to the Monet Garden
 <br><br>
- Date and Time<div class="texts">:</div> October 28th from 12 to 1 PM
+ Date and Time<div class="texts">:</div> October 28th from 11:30 AM to 1 PM
  <br><br>
- Photographer<div class="texts">:</div>  Moree Scofield
- <br>Photo session will proceed wedding ceremony 
+ <br>Photo session will proceed wedding ceremony  from 11:30 AM to 12:15 PM
  <br>and continue through the duration of the wedding ceremony.<br>
  Any are welcome to take photos.  
- <br>Just don’t blind us with the flash!  Haha!
- <br>
- <br>
+ <br>Just don’t blind us with the flash!  Haha!<br><br>
+ Photographer<div class="texts">:</div>  Moree Scofield, colleague and friend of the bride. <br><br>
+ Ceremony commences at 12:15 PM promptly concludes by 1 PM.
+ <br><br>
  Officiant<div class="texts">:</div>  Janet K Tinsley,  colleague and friend of the bride
  <br><br>
- Processional music<div class="texts">:</div>  John Overton, father of the groom.
+ Music performed by<div class="texts">:</div>  Andy Adams, brother-in-law of the bride.
  <br><br>
  Inclement Weather<div class="texts">:</div>
- This will be an outdoor wedding!  <br>Prepare possibly for cooler temperatures!<br>    
- If inclement weather occurs, the Arboretum visitor<div class="texts">'</div>s center<br> will serve as the alternative location for the wedding ceremony.
- 
+ This will be an outdoor wedding!  <br>Prepare possibly for cooler or warmer temperatures!<br>
+ (It's Kansas so you never know!)<br><br>  
+ If inclement weather occurs, the Arboretum visitor<div class="texts">'</div>s center will serve as the alternative location for the wedding ceremony.
+ <br>
+ This is the first building you'll see after passing through the main entrance to the arboretum.
+ <br><br>
+ Signs at the site will provide direction to the location of the ceremony and photo shoot area.
 </div>  
 </div>
+</div>
+<ng-template #other_content>
+    <div class="generaltext"  (window:resize)="onResize()">
+        <div class="texth" style.font-size="{{rtitleWeight}}px">Ceremony</div>
+        <br><br>
+        <div class="addresstext" style.font-size="{{raddressWeight}}px"> Overland Park Arboretum</div>
+        <div class="addresstext2" style.font-size="{{raddressWeight}}px"> 8909 W 179th Street</div>
+        <div class="addresstext3" style.font-size="{{raddressWeight}}px"> Overland Park, Kansas 66013</div>
+        <br>
+        <img  src="./assets/bitmap.png" style.height="{{rmapImageSize}}px">
+        <div class="addresstext4" style.font-size="{{raddressWeight}}px"> From the Arboretum parking lot go to the Monet Garden
+        <br><br>
+         Date and Time<div class="texts">:</div> October 28th from 11:30 AM to 1 PM
+         <br><br>
+         <br>Photo session will proceed wedding ceremony  from 11:30 AM to 12:15 PM
+         <br>and continue through the duration of the wedding ceremony.<br>
+         Any are welcome to take photos.  
+         <br>Just don’t blind us with the flash!  Haha!<br><br>
+         Photographer<div class="texts">:</div>  Moree Scofield, colleague and friend of the bride. <br><br>
+         Ceremony commences at 12:15 PM promptly concludes by 1 PM.
+         <br><br>
+         Officiant<div class="texts">:</div>  Janet K Tinsley,  colleague and friend of the bride
+         <br><br>
+         Music performed by<div class="texts">:</div>  Andy Adams, brother-in-law of the bride.
+         <br><br>
+         Inclement Weather<div class="texts">:</div>
+         This will be an outdoor wedding!  <br>Prepare possibly for cooler or warmer temperatures!  (It's Kansas so you never know!)<br><br>    
+         If inclement weather occurs, the Arboretum visitor<div class="texts">'</div>s center will serve as the alternative location for the wedding ceremony.
+         <br>
+         This is the first building you'll see after passing through the main entrance to the arboretum.
+         <br><br>
+         Signs at the site will provide direction to the location of the ceremony and photo shoot area.
+        </div>  
+        </div>   
+</ng-template>

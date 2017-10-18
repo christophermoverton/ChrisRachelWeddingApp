@@ -1,4 +1,6 @@
     <nav class="navset">
+        <li><a class='set' (click)="showMenu()"><img class="set2" [ngClass]="showM? 'hidstuff1' : 'hidstuff3'" src="./assets/menu-icon-8.png"></a></li>
+      <div [ngClass]="showM? 'hidstuff2' : 'hidstuff1'">
       <div class="boxshadow">
       <li><a class='set' routerLink="/app-root" routerLinkActive="active" [@visibilityChanged]="visibility"><img class="set2" src="./assets/homeicon.png"></a></li>
     
@@ -6,6 +8,7 @@
       <li><a class='set' routerLink="/Celebration" routerLinkActive="active"[@visibilityChanged]="visibility"><img class="set2" src="./assets/celebrationicon.png"></a></li>
       <li><a class='set' routerLink="/Guestbook" routerLinkActive="active"[@visibilityChanged]="visibility"><img class="set2" src="./assets/guestbookicon.png"></a></li>
       <li><a class='set' routerLink="/Aboutus" routerLinkActive="active"[@visibilityChanged]="visibility"><img class="set2" src="./assets/aboutusicon.png"></a></li>
+      </div>
       </div>
     </nav>
 

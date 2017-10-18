@@ -21,6 +21,7 @@ host: {'[@routerTransition]': ''}*/
     screenwidth = window.innerWidth-150;
     maxframeWidth: number = window.innerWidth-50;
     rmaxframeWidth = window.innerWidth-50;
+    windowSmall: boolean = false;
     framer: frameResizer;
     constructor(){
         this.framer = new frameResizer(1.0,1.0);
@@ -36,5 +37,15 @@ host: {'[@routerTransition]': ''}*/
       this.raddressWeight = this.rtitleWeight*0.45;
       this.rmapImageSize = this.mapImageSize*Math.pow(this.framer.getScale(),0.8);
 
+    }
+
+    checkWindowSize(): void{
+      if (window.innerWidth < 500.0){
+          this.windowSmall = true;
+      }
+      else{
+          this.windowSmall = false;
+      }
+      
     }
    }
