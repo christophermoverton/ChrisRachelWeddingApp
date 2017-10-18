@@ -67,7 +67,7 @@ host: {'[@routerTransition]': ''}*/
     rtopPos2: number = 0;
     constructor(){
         this.framer = new frameResizer(1.0,1.0);
-        this.rtitleWeight = Math.pow(this.framer.getScale(),0.4)*this.titleWeight;
+        this.rtitleWeight = Math.pow(this.framer.getScale(),0.6)*this.titleWeight;
         this.raddressWeight = this.rtitleWeight*0.25;
         this.rmapImageSize = this.mapImageSize*this.framer.getScale();
         this.rrowHeight = this.rowHeight*Math.pow(this.framer.getScale(),0.3);
@@ -79,12 +79,14 @@ host: {'[@routerTransition]': ''}*/
         console.log("hitting aboutusinit!");
         console.log(this.windowSmall);
         console.log(this.windowSmallHeight);
+        this.rtopPos = this.topPos-window.scrollY; 
+        this.rtopPos2 = this.topPos2 - window.scrollY;
     }
     onResize(){
       this.screenwidth = window.innerWidth-50;
       this.rmaxframeWidth = window.innerWidth-50;
       this.framer = new frameResizer(1.0,1.0);
-      this.rtitleWeight = Math.pow(this.framer.getScale(),0.4)*(this.titleWeight);
+      this.rtitleWeight = Math.pow(this.framer.getScale(),0.6)*(this.titleWeight);
       this.raddressWeight = this.rtitleWeight*0.45;
       this.rmapImageSize = this.mapImageSize*this.framer.getScale();
       this.rrowHeight = this.rowHeight*Math.pow(this.framer.getScale(),0.3);
